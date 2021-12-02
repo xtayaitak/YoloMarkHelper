@@ -12,7 +12,7 @@ This Only work for windows.
 Helper.exe CheckMark2 YourImgPath Name.
 
 
-for example:Helper.exe CheckMark2 data\ poisson
+for example:Helper.exe CheckMark2 E:\data\ poisson
 
 
 
