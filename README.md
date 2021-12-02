@@ -1,7 +1,7 @@
 # YoloMarkHelper
-Help To Check YoloMark Errors
+Help To Check YoloMark Errors.
 
-This Only work for windows.
+It Only work for windows.
 
 ## Example
 
