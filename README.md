@@ -7,9 +7,9 @@ This Only work for windows.
 
 ## Check You Marked Dataset
 
-**Before Check You Must Put Names(classes.txt) to Image folder**
+**You have to Put object.names to Image folder First **
 
-Helper.exe CheckMark2 YourImgPath Name.
+Helper.exe CheckMark2 Your absolute ImgPath Name.
 
 
 for example:Helper.exe CheckMark2 E:\data\ poisson
