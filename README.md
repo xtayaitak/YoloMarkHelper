@@ -3,11 +3,11 @@ Help To Check YoloMark Errors
 
 This Only work for windows.
 
-# Example
+## Example
 
-## Check You Marked Dataset
+### Check You Marked Dataset
 
-**You have to Put object.names to Image folder First **
+**You have to Put object.names to Image folder First**
 
 Helper.exe CheckMark2 Your absolute ImgPath Name.
 
