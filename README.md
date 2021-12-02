@@ -9,5 +9,9 @@ This Only work for windows.
 
 **Before Check You Must Put Names(classes.txt) to Image folder**
 
-Helper.exe CheckMark2 E:\wg\Majiang\YoloMarkHelper\x64\Release\data\ poisson
+Helper.exe CheckMark2 YourImgPath Name
+for example:Helper.exe CheckMark2 data\ poisson
+
+
+
 ![image](https://github.com/xtayaitak/YoloMarkHelper/blob/master/image/CheckMark2.png)
