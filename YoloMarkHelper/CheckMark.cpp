@@ -213,7 +213,7 @@ void CheckMark2(const std::string& path, const std::string& obj_name)
 
     const int SMALL_WIDTH = 60;
     const int SMALL_HEIGHT = 90;
-    
+    const int IMAGE_COUNT_PER_LINE = 20;
     std::vector<cv::Mat> all_lines;
     std::vector<cv::Mat> line_mat_list;
     for (size_t i = 0; i < all_small_images.size(); i++) {
@@ -223,7 +223,7 @@ void CheckMark2(const std::string& path, const std::string& obj_name)
         cv::resize(small_img, small_img_resized, cv::Size(SMALL_WIDTH, SMALL_HEIGHT));
         line_mat_list.push_back(small_img_resized);
 
-        if (line_mat_list.size() == 10) {
+        if (line_mat_list.size() == IMAGE_COUNT_PER_LINE) {
             cv::Mat line_img;
             cv::hconcat(line_mat_list, line_img);
             all_lines.push_back(line_img);
@@ -235,9 +235,9 @@ void CheckMark2(const std::string& path, const std::string& obj_name)
 
     cv::Mat result_image(0, all_lines[0].cols, all_lines[0].type());
 
-    //the last row maybe not equal to 10 * SMALL_WIDTH ,add empty mat.
-    if (all_lines[all_lines.size() - 1].cols < SMALL_WIDTH * 10) {
-        cv::Mat temp = cv::Mat::zeros(SMALL_HEIGHT, SMALL_WIDTH * 10 - all_lines[all_lines.size() - 1].cols, all_lines[all_lines.size() - 1].type());
+    //the last row maybe not equal to IMAGE_COUNT_PER_LINE * SMALL_WIDTH ,add empty mat.
+    if (all_lines[all_lines.size() - 1].cols < SMALL_WIDTH * IMAGE_COUNT_PER_LINE) {
+        cv::Mat temp = cv::Mat::zeros(SMALL_HEIGHT, SMALL_WIDTH * IMAGE_COUNT_PER_LINE - all_lines[all_lines.size() - 1].cols, all_lines[all_lines.size() - 1].type());
         cv::hconcat(all_lines[all_lines.size() - 1],temp, all_lines[all_lines.size() - 1]);
     }
     cv::vconcat(all_lines, result_image);
