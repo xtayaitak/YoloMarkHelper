@@ -46,10 +46,13 @@ namespace file_tools
 	{
 		WIN32_FIND_DATAW ffd;
 		HANDLE hFind = INVALID_HANDLE_VALUE;
-		WCHAR szFindDir[MAX_PATH] = { 0 };
-		wcscpy_s(szFindDir, strFolder.c_str());
-		wcscat_s(szFindDir, suffix.c_str());
-		hFind = FindFirstFileW(szFindDir, &ffd);
+		std::wstring find_dir;
+		find_dir = strFolder;
+		if (find_dir[find_dir.length() - 1] != '\\' || find_dir[find_dir.length() - 1] != '/') {
+			find_dir.push_back('\\');
+		}
+		find_dir += suffix;
+		hFind = FindFirstFileW(find_dir.c_str(), &ffd);
 
 		if (INVALID_HANDLE_VALUE == hFind)
 		{
