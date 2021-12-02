@@ -9,7 +9,9 @@ This Only work for windows.
 
 **Before Check You Must Put Names(classes.txt) to Image folder**
 
-Helper.exe CheckMark2 YourImgPath Name
+Helper.exe CheckMark2 YourImgPath Name.
+
+
 for example:Helper.exe CheckMark2 data\ poisson
 
 
